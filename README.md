@@ -14,3 +14,5 @@ Limitations: So many !
 Vibecoded nonsense for fun
 
 Mallyhubz
+
+![Alt text](screenshot.jpg)
