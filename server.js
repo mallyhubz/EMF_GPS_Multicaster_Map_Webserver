@@ -79,7 +79,7 @@ udp.on("message", (msg, rinfo) => {
     const lat = parseFloat(latStr);
     const lon = parseFloat(lonStr);
 
-    if (!isFinite(lat) || !isFinite(lon)) return;
+    //if (!isFinite(lat) || !isFinite(lon)) return;
 
     broadcast({ label, lat, lon });
 });

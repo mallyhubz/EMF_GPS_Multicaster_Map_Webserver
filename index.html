@@ -75,7 +75,15 @@ ws.onmessage = (event) => {
 
     // Update existing row
     if (items[label]) {
-        items[label].coords.textContent = `${tstring} lat: ${lat}, lon: ${lon}`;
+	
+		if (lat == null) {
+		items[label].coords.textContent = `${tstring} Trying to get fix`;
+	}
+	else {
+		items[label].coords.textContent = `${tstring} lat: ${lat}, lon: ${lon}`;
+	}
+	
+        
 
         items[label].follow.onclick = () => {
             setActiveLabel(label, lat, lon);
@@ -106,7 +114,13 @@ ws.onmessage = (event) => {
 	
     const coords = document.createElement("span");
     coords.className = "coords";
-    coords.textContent = `${tstring} lat: ${lat}, lon: ${lon}`;
+	
+	if (lat == null) {
+		coords.textContent = `${tstring} Trying to get fix`;
+	}
+	else {
+		coords.textContent = `${tstring} lat: ${lat}, lon: ${lon}`;
+	}
 
     wrapper.appendChild(name);
     wrapper.appendChild(follow);
